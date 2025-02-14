@@ -39,7 +39,6 @@ if ($page !== null) {
         <body>
             <h1>Error 404 - Page Not Found</h1>
             <p>The requested page does not exist.</p>
-            <p>Note for Ali: Don't misuse your admin role, I am logging your actions at app.log and you will be punished</p>
             <p>Please return to <a href="./">homepage</a>.</p>
         </body>
 

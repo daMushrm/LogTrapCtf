@@ -6,13 +6,13 @@ if (isset($_COOKIE['auth']) && $_COOKIE['auth'] === 'OAhG8QQBAPCyCRebiYVLcyahwEN
     $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'Unknown';
 
     $log_entry = sprintf(
-        "[%s] IP: %s | Method: %s | URI: %s | User-Agent: %s | X-Traking-Id: %s\n",
+        "[%s] IP: %s | Method: %s | URI: %s | User-Agent: %s | X-Admin-Id: %s\n",
         date('Y-m-d H:i:s'),
         $_SERVER['REMOTE_ADDR'],
         $_SERVER['REQUEST_METHOD'],
         $_SERVER['REQUEST_URI'],
         $user_agent,
-        isset($_SERVER['HTTP_X_TRACKING_ID']) ? $_SERVER['HTTP_X_TRACKING_ID'] : 'Unknown'
+        isset($_SERVER['HTTP_X_ADMIN_ID']) ? $_SERVER['HTTP_X_ADMIN_ID'] : 'Unknown'
     );
 
     file_put_contents($log_file, $log_entry, FILE_APPEND);

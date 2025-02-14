@@ -1,1 +1,1 @@
-[2025-02-14 12:14:55] IP: ::1 | Method: GET | URI: /admin.php | User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 | X-Traking-Id: <?php phpinfo(); ?>
+[2025-02-14 12:21:23] IP: ::1 | Method: POST | URI: /?page=admin.php | User-Agent: curl/8.11.1 | X-Admin-Id: 145342425

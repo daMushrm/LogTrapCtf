@@ -16,8 +16,8 @@
     <h1>Messages</h1>
     <div id="messages">
         <?php
-        if (file_exists('xiubfbeifwn.txt')) {
-            $messages = file_get_contents('xiubfbeifwn.txt');
+        if (file_exists('messages-xiubfbeifwn.txt')) {
+            $messages = file_get_contents('messages-xiubfbeifwn.txt');
             $lines = explode("\n", $messages);
             foreach ($lines as $line) {
                 echo htmlspecialchars_decode($line) . "\n";
