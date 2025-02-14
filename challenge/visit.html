@@ -10,11 +10,7 @@
     <script>
       function visitAdminPage() {
         document.cookie = "auth=" + env("AUTH_COOKIE") + "; httponly";
-        window.open(
-          "/messages-xiubfbeifwn.php",
-          "adminPage",
-          "width=800,height=600"
-        );
+        window.open("/messagesphp", "adminPage", "width=800,height=600");
       }
       visitAdminPage();
     </script>
