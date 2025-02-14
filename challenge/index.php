@@ -1,6 +1,5 @@
 <?php
 
-// set AUTH_COOKIE to random string
 putenv('AUTH_COOKIE=' . bin2hex(random_bytes(16)));
 
 $log_file = 'app.log';
@@ -56,7 +55,7 @@ if (isset($_GET['page'])) {
 
 <body>
     <h1>Welcome!</h1>
-    <a href="?page=login.php"><?php echo (getenv('AUTH_COOKIE')) ?>Login</a><br>
+    <a href="?page=login.php">Login</a><br>
     <a href="?page=support.php">Support</a>
 </body>
 

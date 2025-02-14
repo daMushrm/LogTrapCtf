@@ -19,8 +19,8 @@ if (isset($_COOKIE['auth']) && $_COOKIE['auth'] === 'OAhG8QQBAPCyCRebiYVLcyahwEN
         <h1>Messages</h1>
         <div id="messages">
             <?php
-            if (file_exists('messages-xiubfbeifwn.txt')) {
-                $messages = file_get_contents('messages-xiubfbeifwn.txt');
+            if (file_exists('messages.txt')) {
+                $messages = file_get_contents('messages.txt');
                 $lines = explode("\n", $messages);
                 foreach ($lines as $line) {
                     echo htmlspecialchars_decode($line) . "\n";
@@ -40,7 +40,6 @@ if (isset($_COOKIE['auth']) && $_COOKIE['auth'] === 'OAhG8QQBAPCyCRebiYVLcyahwEN
             returnToHome();
         }, 1000);
     </script>
-
     </html>
 <?php
 } else {

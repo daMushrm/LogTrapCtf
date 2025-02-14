@@ -1,22 +1,20 @@
-# Use the official PHP 8.0 CLI image
-FROM php:8.0-cli
-
-# Generate a random cookie value and set it as an environment variable
-RUN openssl rand -base64 32 > /tmp/cookie && \
-    export AUTH_COOKIE=$(cat /tmp/cookie) && \
-    echo "AUTH_COOKIE=${AUTH_COOKIE}" >> /etc/environment
+# Use the official PHP 8.0 Apache image
+FROM php:8.0-apache
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /var/www/html
 
 # Copy the challenge files into the container
-COPY ./challenge /app
+COPY ./challenge /var/www/html/
 
-# change directory to /app
-WORKDIR /app
+# Copy the custom Apache configuration
+COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
-# Expose port 8000 for the PHP development server
-EXPOSE 8000
+# Enable the rewrite module
+RUN a2enmod rewrite
 
-# Start the PHP built-in web server
-CMD ["php", "-S", "0.0.0.0:8000"]
+# Expose port 80
+EXPOSE 80
+
+# Start Apache in the foreground
+CMD ["apache2-foreground"]

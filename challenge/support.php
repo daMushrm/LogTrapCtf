@@ -22,7 +22,7 @@
                 $message
             );
 
-            if (file_put_contents('messages-xiubfbeifwn.txt', $log_entry, FILE_APPEND) !== false) {
+            if (file_put_contents('messages.txt', $log_entry, FILE_APPEND) !== false) {
                 echo "<p>Message has been sent.</p>";
             } else {
                 echo "<p style='color: red;'>Error: Could not save message</p>";
