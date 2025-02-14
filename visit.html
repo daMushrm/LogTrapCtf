@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulate Admin Visit</title>
+  </head>
+  <body>
+    <a href="/">return home</a>
+    <script>
+      function visitAdminPage() {
+        document.cookie = "auth=OAhG8QQBAPCyCRebiYVLcyahwENQxWMy2/auPDHHM74=";
+        window.open(
+          "/messages-xiubfbeifwn.php",
+          "adminPage",
+          "width=800,height=600"
+        );
+      }
+      visitAdminPage();
+    </script>
+  </body>
+</html>
