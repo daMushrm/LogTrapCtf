@@ -5,10 +5,13 @@ FROM php:8.0-apache
 WORKDIR /var/www/html
 
 # Copy the challenge files into the container
-COPY ./challenge /var/www/html/
+COPY ./challenge .
 
 # Copy the custom Apache configuration
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
+ 
+RUN chown www-data:www-data /var/www/html/messages.txt && \
+    chmod 644 /var/www/html/messages.txt
 
 # Enable the rewrite module
 RUN a2enmod rewrite

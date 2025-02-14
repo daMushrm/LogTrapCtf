@@ -9,7 +9,7 @@
     <a href="/">return home</a>
     <script>
       function visitAdminPage() {
-        document.cookie = "auth=OAhG8QQBAPCyCRebiYVLcyahwENQxWMy2/auPDHHM74=";
+        document.cookie = "auth=" + env("AUTH_COOKIE") + "; httponly";
         window.open(
           "/messages-xiubfbeifwn.php",
           "adminPage",
