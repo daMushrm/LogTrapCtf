@@ -2,7 +2,9 @@
 
 $log_file = 'app.log';
 
-if (isset($_COOKIE['auth']) && $_COOKIE['auth'] === 'OAhG8QQBAPCyCRebiYVLcyahwENQxWMy2/auPDHHM74=') {
+$auth_cookie = getenv('AUTH_COOKIE');
+
+if (isset($_COOKIE['auth']) && $_COOKIE['auth'] === $auth_cookie) {
     $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'Unknown';
 
     $log_entry = sprintf(
@@ -25,10 +27,9 @@ if (isset($_COOKIE['auth']) && $_COOKIE['auth'] === 'OAhG8QQBAPCyCRebiYVLcyahwEN
     <body>
         <h1>Error 403 - Forbidden</h1>
         <p>You are not allowed to access this page.</p>
-        <p>Please return to <a href="./">homepage</a>.</p>
     </body>
 
     </html>
 <?php
-    exit();
 }
+?>

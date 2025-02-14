@@ -4,3 +4,5 @@ services:
     build: .
     ports:
       - "8000:8000"
+    environment:
+      - SECRET_KEY=${SECRET_KEY:-$(openssl rand -base64 32)}
